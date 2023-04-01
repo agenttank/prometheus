@@ -122,7 +122,7 @@ services:
     ports:
       - 9221:9221
     volumes: 
-      - "/var/lib/docker/volumes/proxmoxexporter/_data/:/etc/"
+      - ./pve-exporter/pve.yml:/etc/pve.yml
     restart: always
     networks:
       - back-tier
