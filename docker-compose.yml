@@ -106,6 +106,12 @@ services:
       - front-tier
     restart: always
 
+  pve-exporter:
+    image: prompve/prometheus-pve-exporter
+    ports:
+      - 9221:9221
+    volumes: /var/lib/docker/volumes/proxmoxexporter/_data/pve.yml:/etc/pve.yml
+
 #  pushgateway:
 #    image: prom/pushgateway
 #    restart: always
