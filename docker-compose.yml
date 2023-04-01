@@ -127,7 +127,7 @@ services:
     networks:
       - back-tier
 
-  snmp:
+  snmp_exporter:
     image: quay.io/prometheus/snmp-exporter
     volumes:
       - /opt/docker-persist/snmp-exporter:/etc/snmp_exporter
@@ -136,3 +136,5 @@ services:
       - 116:116/udp
     restart: always
     command: --config.file=/etc/snmp_exporter/snmp.yml
+    networks:
+      - back-tier
