@@ -1,0 +1,12 @@
+groups:
+- name: proxmox
+  rules:
+
+  - alert: quorum
+    expr: pve_cluster_info{quorate} == 0
+    for: 1m
+    labels:
+      severity: page
+    annotations:
+      summary: "Proxmox Cluster ist nicht quorate"
+      description: "Mindestens eine Stimme scheint zu fehlen"
