@@ -55,7 +55,8 @@ scrape_configs:
   - job_name: 'pve'
     static_configs:
       - targets:
-        - 192.168.45.8
+        - 192.168.45.3
+        - 192.168.45.4
     metrics_path: /pve
     params:
       module: [default]
