@@ -63,7 +63,6 @@ services:
     ports:
       - 9093:9093
     volumes:
-      - ./alertmanager/:/etc/alertmanager/
       - /portainer/prometheus/alertmanager/config.yaml:/etc/alertmanager/config.yaml
     networks:
       - back-tier
