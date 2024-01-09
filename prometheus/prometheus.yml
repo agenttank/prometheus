@@ -78,7 +78,7 @@ scrape_configs:
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: exporter:9348
+        replacement: idrac-exporter:9348
 
           #  - job_name: 'snmp'
           #    static_configs:
