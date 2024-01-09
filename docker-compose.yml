@@ -129,7 +129,8 @@ services:
 
   idrac-exporter:
     image: mrlhansen/idrac_exporter
-    ports: 9348:9348
+    ports: 
+      - 9348:9348
     volumes:
       - /var/lib/docker/volumes/idrac_exporter/_data/idrac.yml:/etc/prometheus/idrac.yml
     restart: always
