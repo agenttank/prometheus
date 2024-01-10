@@ -122,7 +122,7 @@ services:
     ports:
       - 9221:9221
     volumes: 
-      - /var/lib/docker/volumes/pve-exporter/_data/pve.yml:/etc/prometheus/pve.yml
+      - /portainer/prometheus/pve-exporter/pve.yml:/etc/prometheus/pve.yml
     restart: always
     networks:
       - back-tier
@@ -132,7 +132,7 @@ services:
     ports: 
       - 9348:9348
     volumes:
-      - /var/lib/docker/volumes/idrac_exporter/_data/idrac.yml:/etc/prometheus/idrac.yml
+      - /portainer/prometheus/idrac_exporter/idrac.yml:/etc/prometheus/idrac.yml
     restart: always
     networks:
       - back-tier
