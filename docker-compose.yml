@@ -144,6 +144,43 @@ services:
       - 9115:9115
     volumes:
       - /portainer/prometheus/blackbox_exporter/blackbox.yml:/config/blackbox.yml
+    extra_hosts:
+      - "fw.pinter-net.at:192.168.10.254"
+      - "cloud.pinter-net.at:80.109.218.159"
+      - "hetzner01.pinter-net.at:116.203.206.46"
+      - "imap.pinter-net.at:116.203.206.46"
+      - "media.pinter-net.at:80.109.218.159"
+      - "smtp.pinter-net.at:116.203.206.46"
+      - "vpn.pinter-net.at:80.109.218.159"
+      - "hv3.pinter-net.at:192.168.45.3"
+      - "hv4.pinter-net.at:192.168.45.4"
+      - "rpi-tv.pinter-net.at:192.168.10.21"
+      - "rpi-piano.pinter-net.at:192.168.10.15"
+      - "rpi-music.pinter-net.at:192.168.10.14"
+      - "stefanpc.pinter-net.at:192.168.10.25"
+      - "rpi-octoprint.pinter-net.at:192.168.10.13"
+      - "drucker.pinter-net.at:192.168.10.200"
+      - "dl.pinter-net.at:192.168.11.254"
+      - "zentyal.pinter-net.at:192.168.11.254"
+      - "hypervisor.pinter-net.at:192.168.11.254"
+      - "print.pinter-net.at:192.168.11.254"
+      - "nas.pinter-net.at:192.168.45.107"
+      - "arcade.pinter-net.at:192.168.10.24"
+      - "music.pinter-net.at:192.168.11.254"
+      - "trans.pinter-net.at:192.168.11.254"
+      - "portainer.pinter-net.at:192.168.11.254"
+      - "pihole-pri.pinter-net.at:192.168.11.254"
+      - "pihole-sec.pinter-net.at:192.168.11.254"
+      - "grafana.pinter-net.at:192.168.11.254"
+      - "prometheus.pinter-net.at:192.168.11.254"
+      - "alertmanager.pinter-net.at:192.168.11.254"
+      - "dck8.pinter-net.at:192.168.45.208"
+      - "dck9.pinter-net.at:192.168.3.209"
+      - "dck4.pinter-net.at:192.168.45.204"
+      - "tdarr.pinter-net.at:192.168.11.254"
+      - "omv.pinter-net.at:192.168.11.254"
+      - "lxc3.pinter-net.at:192.168.3.103"
+      - "photo.pinter-net.at:192.168.11.254"
     restart: always
     networks:
       - back-tier
