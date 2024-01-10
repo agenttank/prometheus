@@ -3,10 +3,10 @@ groups:
   rules:
 
   - alert: quorum
-    expr: pve_cluster_info{quorate="1"} == 0
+    expr: ha_cluster_corosync_quorum_votes{type="total_votes"} < 3
     for: 1m
     labels:
       severity: page
     annotations:
-      summary: "Proxmox Cluster ist nicht quorate"
-      description: "Mindestens eine Stimme scheint zu fehlen"
+      summary: "Proxmox Cluster ist nicht ganz gesund?!"
+      description: "Mindestens eine Stimme fehlt"
