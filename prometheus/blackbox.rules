@@ -1,0 +1,12 @@
+groups:
+- name: blackbox_exporter
+  rules:
+
+  - alert: BlackboxConfigurationReloadFailure
+    expr: blackbox_exporter_config_last_reload_successful != 1
+    for: 0m
+    labels:
+      severity: warning
+    annotations:
+      summary: Blackbox configuration reload failure (instance {{ $labels.instance }})
+      description: "Blackbox configuration reload failure\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"

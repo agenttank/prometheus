@@ -13,6 +13,8 @@ rule_files:
   - 'alert.rules'
   - 'pve.rules'
   - 'ssh.rules'
+  - 'blackbox.rules'
+  - 'http.rules'
 
 # alert
 alerting:
