@@ -2,6 +2,7 @@ version: '3.7'
 
 volumes:
     prometheus_data: {}
+    alertmanager_data: {}
     grafana_data: {}
 
 networks:
@@ -64,6 +65,7 @@ services:
       - 9093:9093
     volumes:
       - /portainer/prometheus/alertmanager/config.yml:/etc/alertmanager/config.yml
+      - alertmanager_data:/alertmanager
     networks:
       - back-tier
     restart: always
