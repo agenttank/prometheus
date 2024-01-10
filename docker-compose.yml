@@ -137,6 +137,17 @@ services:
     networks:
       - back-tier
 
+  blackbox_exporter:
+    image: quay.io/prometheus/blackbox-exporter:latest
+    command: /bin/blackbox_exporter --config.file=/config/blackbox.yml
+    ports: 
+      - 9115:9115
+    volumes:
+      - /portainer/prometheus/blackbox_exporter/blackbox.yml:/config/blackbox.yml
+    restart: always
+    networks:
+      - back-tier
+
 #  snmp_exporter:
 #    image: quay.io/prometheus/snmp-exporter
 #    volumes:
