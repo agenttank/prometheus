@@ -1,0 +1,12 @@
+groups:
+- name: ssh
+  rules:
+
+  - alert: SSH unreachable
+    expr: probe_success{job="SSH Checks"} == 0
+    for: 1m
+    labels:
+      severity: page
+    annotations:
+      summary: "SSH vong 1 bestimmts host nicht erreichbar"
+      description: "tcp auf port 22 geht nicht"
