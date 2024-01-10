@@ -139,7 +139,7 @@ services:
 
   blackbox_exporter:
     image: quay.io/prometheus/blackbox-exporter:latest
-    command: /bin/blackbox_exporter --config.file=/config/blackbox.yml
+    command: --config.file=/config/blackbox.yml
     ports: 
       - 9115:9115
     volumes:
