@@ -188,6 +188,13 @@ services:
     networks:
       - back-tier
 
+  json_exporter:
+    image: quay.io/prometheuscommunity/json-exporter
+    ports:
+      - 7979:7979
+    volumes:
+      - ./json_exporter/config.yml:/config.yml
+
 #  snmp_exporter:
 #    image: quay.io/prometheus/snmp-exporter
 #    volumes:
