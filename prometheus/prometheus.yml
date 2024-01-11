@@ -20,6 +20,9 @@ alerting:
     - targets:
       - "alertmanager:9093"
 
+scrape_config_files:
+  - "scraper/*.yml"
+
 scrape_configs:
 
   - job_name: 'prometheus'
