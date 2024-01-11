@@ -7,29 +7,6 @@ modules:
     - name: example_global_value
       path: '{ .totalBalance }'
       help: Example of a top-level global value scrape in the json
-      labels:
-        environment: beta # static label
-        location: 'planet-{.location}'          # dynamic label
-    - name: example_timestamped_value
-      type: object
-      path: '{ .values[?(@.state == "INACTIVE")] }'
-      epochTimestamp: '{ .timestamp }'
-      help: Example of a timestamped value scrape in the json
-      labels:
-        environment: beta # static label
-      values:
-        count: '{.count}' # dynamic value
-    - name: example_value
-      type: object
-      help: Example of sub-level value scrapes from a json
-      path: '{.values[?(@.state == "ACTIVE")]}'
-      labels:
-        environment: beta # static label
-        id: '{.id}'       # dynamic label
-      values:
-        active: 1         # static value
-        count: '{.count}' # dynamic value
-        boolean: '{.some_boolean}'
 
 
 # {"totalBalance":"5415986384","sigLockedBalance":"5041598656","ledgerIndex":9274289}
