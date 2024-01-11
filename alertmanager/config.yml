@@ -1,0 +1,17 @@
+route:
+  receiver: 'Mail Alert'
+  # group_by: [ alertname ]
+  repeat_interval: 4h
+  group_wait: 30s
+  group_interval: 5m
+
+receivers:
+  - name: 'Mail Alert'
+    email_configs:
+      - smarthost: 'smtp.pinter-net.at:587'
+        auth_username: 'alert@pinter-net.at'
+        auth_password: "fakepassword"
+        from: 'alert@pinter-net.at'
+        to: 'stefan@pinter-net.at'
+        headers:
+          subject: 'PP'

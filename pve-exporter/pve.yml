@@ -1,0 +1,5 @@
+default:
+    user: prometheus@pam
+    token_name: prometheus
+    token_value: "fakeUUID"
+    verify_ssl: false
