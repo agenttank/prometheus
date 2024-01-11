@@ -5,4 +5,3 @@
     - ./alertmanager/config.yml
     - ./pve-exporter/pve.yml
     - ./idrac_exporter/idrac.yml
-    - ./blackbox_exporter/blackbox.yml

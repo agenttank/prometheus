@@ -145,7 +145,7 @@ services:
     ports: 
       - 9115:9115
     volumes:
-      - /portainer/prometheus/blackbox_exporter/blackbox.yml:/config/blackbox.yml
+      - ./blackbox_exporter/blackbox.yml:/config/blackbox.yml
     extra_hosts:
       - "fw.pinter-net.at:192.168.10.254"
       - "cloud.pinter-net.at:80.109.218.159"
