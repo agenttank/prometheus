@@ -5,6 +5,11 @@ modules:
     - name: balance
       path: '{ .totalBalance }'
       help: How many crypto tokens or coins are on the address
+  binanceprice:
+    metrics:
+    - name: iotaprice
+      path: '{ .price }'
+      help: Actual price of 1 iota
 
 
 # {"totalBalance":"5415986384","sigLockedBalance":"5041598656","ledgerIndex":9274289}
