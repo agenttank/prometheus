@@ -1,0 +1,13 @@
+
+groups:
+- name: balance
+  rules:
+
+  - alert: Balance changed
+    expr: changes(balance[1m]) > 0
+    for: 0m
+    labels:
+      severity: critical
+    annotations:
+      summary: "The value of the adress changed"
+      description: "Balance changed"
