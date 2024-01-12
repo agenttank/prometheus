@@ -1,12 +1,10 @@
 ---
 modules:
-  default:
-    headers:
-      X-Dummy: my-test-header
+  chronicle:
     metrics:
-    - name: example_global_value
+    - name: balance
       path: '{ .totalBalance }'
-      help: Example of a top-level global value scrape in the json
+      help: How many crypto tokens or coins are on the address
 
 
 # {"totalBalance":"5415986384","sigLockedBalance":"5041598656","ledgerIndex":9274289}
