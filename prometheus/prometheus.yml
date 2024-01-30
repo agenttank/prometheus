@@ -1,6 +1,6 @@
 global:
-  scrape_interval:     15s # By default, scrape targets every 15 seconds.
-  evaluation_interval: 15s # By default, scrape targets every 15 seconds.
+  scrape_interval:     75s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 75s # By default, scrape targets every 15 seconds.
   # scrape_timeout is set to the global default (10s).
 
   # Attach these labels to any time series or alerts when communicating with
@@ -26,12 +26,12 @@ scrape_config_files:
 scrape_configs:
 
   - job_name: 'prometheus'
-    scrape_interval: 15s
+    scrape_interval: 75s
     static_configs:
          - targets: ['localhost:9090']
 
   - job_name: 'cadvisor'
-    scrape_interval: 15s
+    scrape_interval: 75s
     static_configs:
       - targets: 
         - cadvisor:8080
@@ -39,7 +39,7 @@ scrape_configs:
         - 192.168.45.204:8080
 
   - job_name: 'node-exporter'
-    scrape_interval: 15s
+    scrape_interval: 75s
     static_configs:
       - targets:
         - node-exporter:9100
@@ -54,7 +54,7 @@ scrape_configs:
         - smtp.pinter-net.at:9100
 
   - job_name: 'hacluster-exporter'
-    scrape_interval: 15s
+    scrape_interval: 75s
     static_configs:
       - targets: ['192.168.45.3:9664', '192.168.45.4:9664']
 
@@ -132,8 +132,8 @@ scrape_configs:
         replacement: blackbox_exporter:9115  # The blackbox exporter's real hostname:port.
 
   - job_name: SSH Checks
-    scrape_timeout: 15s
-    scrape_interval: 15s
+    scrape_timeout: 75s
+    scrape_interval: 75s
     metrics_path: /probe
     params:
       module: [tcp_connect]
