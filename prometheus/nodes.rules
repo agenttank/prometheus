@@ -100,15 +100,6 @@ groups:
       summary: Host CPU steal noisy neighbor (instance {{ $labels.instance }})
       description: "CPU steal is > 10%. A noisy neighbor is killing VM performances or a spot instance may be out of credit.\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
 
-  - alert: HostUnusualDiskIo
-    expr: (rate(node_disk_io_time_seconds_total[1m]) > 0.5) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}
-    for: 5m
-    labels:
-      severity: warning
-    annotations:
-      summary: Host unusual disk IO (instance {{ $labels.instance }})
-      description: "Time spent in IO is too high on {{ $labels.instance }}. Check storage for issues.\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
-
   - alert: HostSwapIsFillingUp
     expr: ((1 - (node_memory_SwapFree_bytes / node_memory_SwapTotal_bytes)) * 100 > 80) * on(instance) group_left (nodename) node_uname_info{nodename=~".+"}
     for: 4m
