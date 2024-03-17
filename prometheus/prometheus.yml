@@ -63,6 +63,7 @@ scrape_configs:
       - targets:
         - 192.168.45.3
         - 192.168.45.4
+        - 192.168.45.5
     metrics_path: /pve
     params:
       module: [default]
@@ -97,6 +98,7 @@ scrape_configs:
       - targets:
         - https://192.168.45.3:8006
         - https://192.168.45.4:8006
+        - https://192.168.45.5:8006
         - https://192.168.45.254
     relabel_configs:
       - source_labels: [__address__]
