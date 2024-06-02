@@ -184,7 +184,7 @@ services:
       - "tdarr.pinter-net.at:192.168.11.254"
       - "omv.pinter-net.at:192.168.11.254"
       - "lxc3.pinter-net.at:192.168.3.103"
-      - "photo.pinter-net.at:192.168.11.254"
+      - "photo.pinter-net.at:80.109.218.159"
     restart: always
     networks:
       - back-tier
