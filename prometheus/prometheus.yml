@@ -25,6 +25,12 @@ scrape_config_files:
 
 scrape_configs:
 
+  - job_name: 'opendtu'
+    scrape_interval: 5s # >= Inverter scrape interval
+    static_configs:
+      - targets: ['192.168.10.42:80']
+    metrics_path: /api/prometheus/metrics
+
   - job_name: 'prometheus'
     scrape_interval: 75s
     static_configs:
