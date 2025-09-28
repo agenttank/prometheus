@@ -157,7 +157,7 @@ services:
       - "vpn.pinter-net.at:80.109.218.159"
       - "hv3.pinter-net.at:192.168.45.3"
       - "hv4.pinter-net.at:192.168.45.4"
-      - "hv5.pinter-net.at:192.168.45.5"
+      - "hv6.pinter-net.at:192.168.45.6"
       - "rpi-tv.pinter-net.at:192.168.10.21"
       - "rpi-piano.pinter-net.at:192.168.10.15"
       - "rpi-music.pinter-net.at:192.168.10.14"
