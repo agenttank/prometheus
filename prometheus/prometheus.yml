@@ -41,8 +41,6 @@ scrape_configs:
     static_configs:
       - targets: 
         - cadvisor:8080
-        - 192.168.3.209:8081
-        - 192.168.45.204:8080
 
   - job_name: 'node-exporter'
     scrape_interval: 75s
@@ -50,13 +48,11 @@ scrape_configs:
       - targets:
         - node-exporter:9100
         - 192.168.45.254:9100
-        - 192.168.45.204:9100
         - 192.168.45.208:9100
         - 192.168.45.3:9100
         - 192.168.45.4:9100
         - 192.168.45.6:9100
         - 192.168.45.107:9100
-        - 192.168.3.209:9100
         - smtp.pinter-net.at:9100
 
   - job_name: 'hacluster-exporter'
@@ -126,7 +122,6 @@ scrape_configs:
         - https://hypervisor.pinter-net.at
         - https://portainer.pinter-net.at
         - https://pihole-pri.pinter-net.at/admin
-        - https://pihole-sec.pinter-net.at/admin
         - https://grafana.pinter-net.at
         - https://prometheus.pinter-net.at
         - https://alertmanager.pinter-net.at
@@ -151,9 +146,7 @@ scrape_configs:
         - 192.168.45.3:22
         - 192.168.45.4:22
         - 192.168.45.6:22
-        - 192.168.45.204:22
         - 192.168.45.208:22
-        - 192.168.3.209:22
         - 192.168.3.103:22
         - 192.168.45.107:22
     relabel_configs:
