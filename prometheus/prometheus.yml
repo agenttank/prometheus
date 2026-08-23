@@ -129,7 +129,6 @@ scrape_configs:
         - https://smtp.pinter-net.at
         - https://hypervisor.pinter-net.at
         - https://portainer.pinter-net.at
-        - https://pihole-pri.pinter-net.at/admin
         - https://grafana.pinter-net.at
         - https://prometheus.pinter-net.at
         - https://alertmanager.pinter-net.at
